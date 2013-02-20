@@ -30,14 +30,14 @@ public class World {
 	}
 		
 	public void update(String action){
-		
-		if (action.equals("Q")){
+		for(IAgent agent : agents) {
+			if (action.equals("Q")){
 				MasSim.setAlive(false);
-		}
-		else{
-			ScheduleElement goal = new ScheduleElement(action);
-			agent.assignGoal(goal);
-			return;
+			}
+			else{
+				ScheduleElement goal = new ScheduleElement(action);
+				agent.assignGoal(goal);
+			}
 		}
 	}
 }
