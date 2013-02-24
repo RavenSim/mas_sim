@@ -1,13 +1,14 @@
 package masSim.agent;
 
-import masSim.world.World;
-import masSim.schedule.ScheduleElement;
+import masSim.world.*;
+import masSim.taems.*;
+
 import java.util.*;
 
 public class Agent implements IAgent{
 
 	private int code;
-	private ScheduleElement curTask;
+	private Task curTask;
 	
 	private enum Status {
 		IDLE, PROCESSNG, EMPTY
@@ -26,6 +27,7 @@ public class Agent implements IAgent{
 		curTask = null;
 		status = Status.EMPTY;
 		agentWorld = new World();
+		System.out.println("Agent created with code" + code);
 	}
 	
 	// Returns identifying code, specific for this agent
@@ -36,9 +38,9 @@ public class Agent implements IAgent{
 	/**
 	 * this object handles the assignment goals
 	 */
-	public void assignGoal(ScheduleElement goal){
-		System.out.println("Goal" + goal.getTitle() + " Assigned");
-		curTask = goal;
+	public void assignTask(Task task){
+		System.out.println("Agent: " + code + " - Task " + task.getName() + " Assigned");
+		curTask = task;
 		
 	}
 	
