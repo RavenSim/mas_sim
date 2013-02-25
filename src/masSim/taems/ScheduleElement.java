@@ -10,6 +10,7 @@ public class ScheduleElement {
 	  private int duration;
 	  private int elapsedTime;
 	  private Status status;
+	  public static int sleepTime = 300; 
 	  public enum Status {
 		    ACTIVE, COMPLETED 
 		}
@@ -42,6 +43,11 @@ public class ScheduleElement {
 		  }
 		  else{
 			  elapsedTime += dt;
+		  }
+		  try {
+			  Thread.sleep(sleepTime); 
+		  } catch (InterruptedException e) {
+			System.out.println("Thread sched el " + name + " interrupted");
 		  }
 		  return status;
 	  }
