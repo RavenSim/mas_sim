@@ -67,18 +67,6 @@ public class World {
 		transTask.addLeaf(tr2);
 		transTask.addLeaf(tr3);
 		
-<<<<<<< HEAD
-	public void update(String action){
-		for(IAgent agent : agents) {
-			if (action.equals("Q")){
-				MasSim.setAlive(false);
-			}
-			else{
-				ScheduleElement goal = new ScheduleElement(action);
-				agent.assignGoal(goal);
-			}
-		}
-=======
 		transSub1.addMethod(tr1);
 		transSub1.addMethod(tr2);
 		transSub1.addMethod(tr3);
@@ -125,6 +113,6 @@ public class World {
 				System.out.println("Thread interrupted");
 			}
 			 */
->>>>>>> evg
 	}
 }
+
