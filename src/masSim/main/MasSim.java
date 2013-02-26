@@ -8,7 +8,7 @@ import raven.utils.Log;
 import raven.utils.MapLoadedException;
 import raven.utils.Log.Level;
 */
-import masSim.schedule.ScheduleElement;
+import masSim.taems.ScheduleElement;
 import masSim.world.World;
 
 import java.io.IOException;
@@ -18,19 +18,18 @@ public class MasSim {
 //		private static RavenUI ui;
 		private static World world;
 		volatile static boolean alive;
-		
+ 
+				
 
 	    public static void main(String args[]) {
 //	    	Log.setLevel(Level.INFO);
 	    	
 //	    	game = new RavenGame();
 //	    	ui = new RavenUI(game);
-
-	    	// Ask user for total of agents to work with
-    		//System.out.println("(A)ssign task    (Q)uit");
-    		//int total_agents = readInput();
-    		int total_agents = 1;
-    		
+	    	
+	       	// Total number of agents to be worked with
+			int total_agents;	    	
+	    	total_agents = 3;
 	    	world = new World(total_agents);
 	    	alive = true;
 	    	
@@ -47,7 +46,7 @@ public class MasSim {
 		private static void simLoop() {
 	    	
 //	    	Log.info("raven", "Starting game...");
-			System.out.println("MasSim starting...");
+			System.out.println("MasSim loop starting...");
 	    	long lastTime = System.nanoTime();
 	    	
 	    	while (alive) {
@@ -56,20 +55,18 @@ public class MasSim {
 //	    		boolean loadedMap = false;
 
 	    		long currentTime = System.nanoTime();
-
-	    		System.out.println("(A)ssign task    (Q)uit");
-	    		
-	    		String input = readInput();
-	    		
-	    		if (input.equals("A")){
-	    			System.out.println("Task Label:");
-	    			
-	    			input = readInput();
-	    		}	
-	    		    		
+	    		    	    		
 //	    		try{
-	    		world.update(input);
+	    		world.update((currentTime - lastTime) * 1.0e-9);
 //	    		}
+	    		
+	    		long millisToNextUpdate = Math.max(0, (1000 / 60) - ((System.nanoTime() - currentTime) / 1000000));
+				lastTime = currentTime;
+				try {
+					Thread.sleep(millisToNextUpdate);
+				} catch (InterruptedException e) {
+					break;
+				}
 /*	    		catch (MapLoadedException e){
 	    			loadedMap = true;
 	    			ui.dispose();
@@ -85,21 +82,15 @@ public class MasSim {
 	    			GameCanvas.stopDrawing();
 	    		}
 */
-	    		long millisToNextUpdate = Math.max(0, (1000 / 60) - ((System.nanoTime() - currentTime) / 1000000));
-				lastTime = currentTime;
-				try {
-					Thread.sleep(millisToNextUpdate);
-				} catch (InterruptedException e) {
-					break;
-				}
 	    	}
 	    	System.out.println("MasSim finished...");
 	   }
+		
 		// User interface mock
-		public static String readInput() {
-			String s = ""; 		 
-			Scanner user_input = new Scanner( System.in );
-			s = user_input.next( );			    
-		    return s;
-		  }	
+//		public static String readInput() {
+//			String s = ""; 		 
+//			Scanner user_input = new Scanner( System.in );
+//			s = user_input.next( );			    
+//		    return s;
+//		  }	
 }
