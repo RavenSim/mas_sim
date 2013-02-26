@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="6" eline="6" spos="0" epos="0"/>
+<text info="[args]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="34" eline="34" spos="15" epos="37"/>
+<jmpPos sline="16" eline="16" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = new masSim.world.World" jmpLink="15" srcLink="34" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+<link label="total_agents has reaching def: total_agents = 1" jmpLink="14" srcLink="32" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="34" eline="34" spos="7" epos="11"/>
+<jmpPos sline="17" eline="17" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = new masSim.world.World" jmpLink="15" srcLink="34" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="35" eline="35" spos="7" epos="11"/>
+<jmpPos sline="19" eline="19" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = 1" jmpLink="18" srcLink="35" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="24" eline="24" spos="0" epos="0"/>
+<text info="[status]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="44" eline="44" spos="7" epos="11"/>
+<jmpPos sline="29" eline="29" spos="0" epos="0"/>
+<link label="status has reaching def: status := @parameter0: boolean" jmpLink="28" srcLink="43" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="33" eline="33" spos="0" epos="0"/>
+<text info="[]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="50" eline="50" spos="4" epos="44"/>
+<jmpPos sline="43" eline="43" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = &amp;lt;java.lang.System: java.io.PrintStream out&amp;gt;" jmpLink="42" srcLink="50" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="51" eline="51" spos="7" epos="40"/>
+<jmpPos sline="45" eline="45" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = staticinvoke &amp;lt;java.lang.System: long nanoTime()&amp;gt;()" jmpLink="44" srcLink="51" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="53" eline="53" spos="14" epos="18"/>
+<jmpPos sline="50" eline="50" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = &amp;lt;masSim.main.MasSim: boolean alive&amp;gt;" jmpLink="49" srcLink="53" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="58" eline="58" spos="8" epos="44"/>
+<jmpPos sline="57" eline="57" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = staticinvoke &amp;lt;java.lang.System: long nanoTime()&amp;gt;()" jmpLink="56" srcLink="58" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="60" eline="60" spos="8" epos="53"/>
+<jmpPos sline="59" eline="59" spos="0" epos="0"/>
+<link label="temp$4 has reaching def: temp$4 = &amp;lt;java.lang.System: java.io.PrintStream out&amp;gt;" jmpLink="58" srcLink="60" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="62" eline="62" spos="8" epos="34"/>
+<jmpPos sline="61" eline="61" spos="0" epos="0"/>
+<link label="temp$5 has reaching def: temp$5 = staticinvoke &amp;lt;masSim.main.MasSim: java.lang.String readInput()&amp;gt;()" jmpLink="60" srcLink="62" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="64" eline="64" spos="18" epos="28"/>
+<jmpPos sline="62" eline="62" spos="0" epos="0"/>
+<link label="input has reaching def: input = temp$5" jmpLink="61" srcLink="62" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="64" eline="64" spos="18" epos="28"/>
+<jmpPos sline="63" eline="63" spos="0" epos="0"/>
+<link label="temp$6 has reaching def: temp$6 = virtualinvoke input.&amp;lt;java.lang.String: boolean equals(java.lang.Object)&amp;gt;(&quot;A&quot;)" jmpLink="62" srcLink="64" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="65" eline="65" spos="9" epos="42"/>
+<jmpPos sline="70" eline="70" spos="0" epos="0"/>
+<link label="temp$7 has reaching def: temp$7 = &amp;lt;java.lang.System: java.io.PrintStream out&amp;gt;" jmpLink="69" srcLink="65" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="67" eline="67" spos="9" epos="13"/>
+<jmpPos sline="72" eline="72" spos="0" epos="0"/>
+<link label="temp$8 has reaching def: temp$8 = staticinvoke &amp;lt;masSim.main.MasSim: java.lang.String readInput()&amp;gt;()" jmpLink="71" srcLink="67" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="71" eline="71" spos="8" epos="27"/>
+<jmpPos sline="77" eline="77" spos="0" epos="0"/>
+<link label="temp$9 has reaching def: temp$9 = &amp;lt;masSim.main.MasSim: masSim.world.World world&amp;gt;" jmpLink="76" srcLink="71" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+<link label="input has reaching def: input = temp$8" jmpLink="72" srcLink="67" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+<link label="input has reaching def: input = temp$5" jmpLink="61" srcLink="62" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="88" eline="88" spos="8" epos="106"/>
+<jmpPos sline="79" eline="79" spos="0" epos="0"/>
+<link label="temp$10 has reaching def: temp$10 = staticinvoke &amp;lt;java.lang.System: long nanoTime()&amp;gt;()" jmpLink="78" srcLink="88" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+<link label="currentTime has reaching def: currentTime = temp$3" jmpLink="57" srcLink="58" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="88" eline="88" spos="8" epos="106"/>
+<jmpPos sline="80" eline="80" spos="0" epos="0"/>
+<link label="temp$11 has reaching def: temp$11 = temp$10 - currentTime" jmpLink="79" srcLink="88" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="88" eline="88" spos="8" epos="106"/>
+<jmpPos sline="81" eline="81" spos="0" epos="0"/>
+<link label="temp$12 has reaching def: temp$12 = temp$11 / 1000000L" jmpLink="80" srcLink="88" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="88" eline="88" spos="8" epos="106"/>
+<jmpPos sline="82" eline="82" spos="0" epos="0"/>
+<link label="temp$13 has reaching def: temp$13 = 16L - temp$12" jmpLink="81" srcLink="88" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="88" eline="88" spos="8" epos="106"/>
+<jmpPos sline="83" eline="83" spos="0" epos="0"/>
+<link label="temp$14 has reaching def: temp$14 = staticinvoke &amp;lt;java.lang.Math: long max(long,long)&amp;gt;(0L, temp$13)" jmpLink="82" srcLink="88" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="89" eline="89" spos="5" epos="12"/>
+<jmpPos sline="84" eline="84" spos="0" epos="0"/>
+<link label="currentTime has reaching def: currentTime = temp$3" jmpLink="57" srcLink="58" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="91" eline="91" spos="6" epos="38"/>
+<jmpPos sline="88" eline="88" spos="0" epos="0"/>
+<link label="millisToNextUpdate has reaching def: millisToNextUpdate = temp$14" jmpLink="83" srcLink="88" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="96" eline="96" spos="7" epos="47"/>
+<jmpPos sline="104" eline="104" spos="0" epos="0"/>
+<link label="temp$15 has reaching def: temp$15 = &amp;lt;java.lang.System: java.io.PrintStream out&amp;gt;" jmpLink="103" srcLink="96" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="110" eline="110" spos="0" epos="0"/>
+<text info="[]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="101" eline="101" spos="25" epos="48"/>
+<jmpPos sline="119" eline="119" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = new java.util.Scanner" jmpLink="117" srcLink="101" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+<link label="temp$1 has reaching def: temp$1 = &amp;lt;java.lang.System: java.io.InputStream in&amp;gt;" jmpLink="118" srcLink="101" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="101" eline="101" spos="25" epos="48"/>
+<jmpPos sline="120" eline="120" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = new java.util.Scanner" jmpLink="117" srcLink="101" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="102" eline="102" spos="4" epos="26"/>
+<jmpPos sline="121" eline="121" spos="0" epos="0"/>
+<link label="user_input has reaching def: user_input = temp$0" jmpLink="120" srcLink="101" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="102" eline="102" spos="4" epos="4"/>
+<jmpPos sline="122" eline="122" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = virtualinvoke user_input.&amp;lt;java.util.Scanner: java.lang.String next()&amp;gt;()" jmpLink="121" srcLink="102" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="103" eline="103" spos="7" epos="15"/>
+<jmpPos sline="123" eline="123" spos="0" epos="0"/>
+<link label="s has reaching def: s = temp$2" jmpLink="122" srcLink="102" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="126" eline="126" spos="0" epos="0"/>
+<text info="[]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="17" eline="17" spos="0" epos="0"/>
+<jmpPos sline="131" eline="131" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.main.MasSim" jmpLink="130" srcLink="17" clssNm="masSim.main.MasSim" aType="Reaching Defs"/>
+</attribute>
+</attributes>

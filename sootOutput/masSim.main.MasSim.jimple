@@ -1,0 +1,134 @@
+public class masSim.main.MasSim extends java.lang.Object
+{
+    private static masSim.world.World world;
+    static boolean alive;
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int total_agents;
+        masSim.world.World temp$0;
+        boolean temp$1;
+
+        args := @parameter0: java.lang.String[];
+        total_agents = 1;
+        temp$0 = new masSim.world.World;
+        specialinvoke temp$0.<masSim.world.World: void <init>(int)>(total_agents);
+        <masSim.main.MasSim: masSim.world.World world> = temp$0;
+        temp$1 = 1;
+        <masSim.main.MasSim: boolean alive> = temp$1;
+        staticinvoke <masSim.main.MasSim: void simLoop()>();
+        return;
+    }
+
+    public static void setAlive(boolean)
+    {
+        boolean status;
+
+        status := @parameter0: boolean;
+        <masSim.main.MasSim: boolean alive> = status;
+        return;
+    }
+
+    private static final void simLoop()
+    {
+        java.io.PrintStream temp$0, temp$4, temp$7, temp$15;
+        long lastTime, temp$1, currentTime, temp$3, millisToNextUpdate, temp$10, temp$11, temp$12, temp$13, temp$14;
+        boolean temp$2, temp$6;
+        java.lang.String input, temp$5, temp$8;
+        masSim.world.World temp$9;
+        java.lang.InterruptedException e;
+
+        temp$0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$0.<java.io.PrintStream: void println(java.lang.String)>("MasSim starting...");
+        temp$1 = staticinvoke <java.lang.System: long nanoTime()>();
+        lastTime = temp$1;
+
+     label0:
+        nop;
+        temp$2 = <masSim.main.MasSim: boolean alive>;
+        if temp$2 == 0 goto label7;
+
+        goto label1;
+
+     label1:
+        nop;
+        temp$3 = staticinvoke <java.lang.System: long nanoTime()>();
+        currentTime = temp$3;
+        temp$4 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$4.<java.io.PrintStream: void println(java.lang.String)>("(A)ssign task    (Q)uit");
+        temp$5 = staticinvoke <masSim.main.MasSim: java.lang.String readInput()>();
+        input = temp$5;
+        temp$6 = virtualinvoke input.<java.lang.String: boolean equals(java.lang.Object)>("A");
+        if temp$6 == 0 goto label3;
+
+        goto label2;
+
+     label2:
+        nop;
+        temp$7 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$7.<java.io.PrintStream: void println(java.lang.String)>("Task Label:");
+        temp$8 = staticinvoke <masSim.main.MasSim: java.lang.String readInput()>();
+        input = temp$8;
+
+     label3:
+        nop;
+        temp$9 = <masSim.main.MasSim: masSim.world.World world>;
+        virtualinvoke temp$9.<masSim.world.World: void update(java.lang.String)>(input);
+        temp$10 = staticinvoke <java.lang.System: long nanoTime()>();
+        temp$11 = temp$10 - currentTime;
+        temp$12 = temp$11 / 1000000L;
+        temp$13 = 16L - temp$12;
+        temp$14 = staticinvoke <java.lang.Math: long max(long,long)>(0L, temp$13);
+        millisToNextUpdate = temp$14;
+        lastTime = currentTime;
+
+     label4:
+        nop;
+        staticinvoke <java.lang.Thread: void sleep(long)>(millisToNextUpdate);
+        goto label6;
+
+     label5:
+        nop;
+        e := @caughtexception;
+        nop;
+        goto label7;
+
+     label6:
+        nop;
+        goto label0;
+
+     label7:
+        nop;
+        temp$15 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$15.<java.io.PrintStream: void println(java.lang.String)>("MasSim finished...");
+        return;
+
+        catch java.lang.InterruptedException from label4 to label5 with label5;
+    }
+
+    public static java.lang.String readInput()
+    {
+        java.lang.String s, temp$2;
+        java.util.Scanner user_input, temp$0;
+        java.io.InputStream temp$1;
+
+        s = "";
+        temp$0 = new java.util.Scanner;
+        temp$1 = <java.lang.System: java.io.InputStream in>;
+        specialinvoke temp$0.<java.util.Scanner: void <init>(java.io.InputStream)>(temp$1);
+        user_input = temp$0;
+        temp$2 = virtualinvoke user_input.<java.util.Scanner: java.lang.String next()>();
+        s = temp$2;
+        return s;
+    }
+
+    public void <init>()
+    {
+        masSim.main.MasSim this;
+
+        this := @this: masSim.main.MasSim;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

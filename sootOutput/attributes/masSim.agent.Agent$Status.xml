@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="13" eline="13" spos="0" epos="0"/>
+<jmpPos sline="14" eline="14" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = new masSim.agent.Agent$Status" jmpLink="13" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="3" epos="6"/>
+<jmpPos sline="15" eline="15" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = new masSim.agent.Agent$Status" jmpLink="13" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="0" epos="0"/>
+<jmpPos sline="17" eline="17" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = new masSim.agent.Agent$Status" jmpLink="16" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="9" epos="17"/>
+<jmpPos sline="18" eline="18" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = new masSim.agent.Agent$Status" jmpLink="16" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="0" epos="0"/>
+<jmpPos sline="20" eline="20" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = new masSim.agent.Agent$Status" jmpLink="19" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="20" epos="24"/>
+<jmpPos sline="21" eline="21" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = new masSim.agent.Agent$Status" jmpLink="19" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="24" eline="24" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = newarray (masSim.agent.Agent$Status)[3]" jmpLink="22" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="temp$4 has reaching def: temp$4 = &amp;lt;masSim.agent.Agent$Status: masSim.agent.Agent$Status IDLE&amp;gt;" jmpLink="23" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="26" eline="26" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = newarray (masSim.agent.Agent$Status)[3]" jmpLink="22" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="temp$5 has reaching def: temp$5 = &amp;lt;masSim.agent.Agent$Status: masSim.agent.Agent$Status PROCESSNG&amp;gt;" jmpLink="25" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="28" eline="28" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = newarray (masSim.agent.Agent$Status)[3]" jmpLink="22" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="temp$6 has reaching def: temp$6 = &amp;lt;masSim.agent.Agent$Status: masSim.agent.Agent$Status EMPTY&amp;gt;" jmpLink="27" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="29" eline="29" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = newarray (masSim.agent.Agent$Status)[3]" jmpLink="22" srcLink="13" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="33" eline="33" spos="0" epos="0"/>
+<text info="[@p0, @p1]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="42" eline="42" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.agent.Agent$Status" jmpLink="39" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="@p0 has reaching def: @p0 := @parameter0: java.lang.String" jmpLink="40" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="@p1 has reaching def: @p1 := @parameter1: int" jmpLink="41" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="46" eline="46" spos="0" epos="0"/>
+<text info="[]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="52" eline="52" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = &amp;lt;masSim.agent.Agent$Status: masSim.agent.Agent$Status[] $VALUES&amp;gt;" jmpLink="51" srcLink="0" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="53" eline="53" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = virtualinvoke temp$0.&amp;lt;java.lang.Object: java.lang.Object clone()&amp;gt;()" jmpLink="52" srcLink="0" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="54" eline="54" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = (masSim.agent.Agent$Status[]) temp$1" jmpLink="53" srcLink="0" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="57" eline="57" spos="0" epos="0"/>
+<text info="[s]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="66" eline="66" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = &amp;lt;masSim.agent.Agent: java.lang.Class class$masSim$agent$Agent$Status&amp;gt;" jmpLink="65" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="69" eline="69" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = staticinvoke &amp;lt;masSim.agent.Agent: java.lang.Class class$(java.lang.String)&amp;gt;(&quot;masSim.agent.Agent$Status&quot;)" jmpLink="68" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="70" eline="70" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = staticinvoke &amp;lt;masSim.agent.Agent: java.lang.Class class$(java.lang.String)&amp;gt;(&quot;masSim.agent.Agent$Status&quot;)" jmpLink="68" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="79" eline="79" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = &amp;lt;masSim.agent.Agent: java.lang.Class class$masSim$agent$Agent$Status&amp;gt;" jmpLink="75" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="temp$0 has reaching def: temp$0 = temp$2" jmpLink="70" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+<link label="s has reaching def: s := @parameter0: java.lang.String" jmpLink="64" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="80" eline="80" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = staticinvoke &amp;lt;java.lang.Enum: java.lang.Enum valueOf(java.lang.Class,java.lang.String)&amp;gt;(temp$0, s)" jmpLink="79" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="0" epos="0"/>
+<jmpPos sline="81" eline="81" spos="0" epos="0"/>
+<link label="temp$4 has reaching def: temp$4 = (masSim.agent.Agent$Status) temp$3" jmpLink="80" srcLink="12" clssNm="masSim.agent.Agent$Status" aType="Reaching Defs"/>
+</attribute>
+</attributes>

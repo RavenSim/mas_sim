@@ -1,0 +1,120 @@
+public class masSim.world.World extends java.lang.Object
+{
+    private int ticks;
+    public static final int maxTicks;
+    private java.util.List agents;
+
+    static void <clinit>()
+    {
+        int temp$0;
+
+        temp$0 = 10;
+        <masSim.world.World: int maxTicks> = temp$0;
+        return;
+    }
+
+    public void <init>()
+    {
+        masSim.world.World this;
+        int temp$0;
+
+        this := @this: masSim.world.World;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        temp$0 = 1;
+        this.<masSim.world.World: int ticks> = temp$0;
+        return;
+    }
+
+    public void <init>(int)
+    {
+        masSim.world.World this;
+        int total_agents, temp$0, i, temp$5, temp$6;
+        java.util.ArrayList temp$1;
+        masSim.agent.Agent agent, temp$2;
+        java.util.List temp$3;
+        boolean temp$4;
+
+        this := @this: masSim.world.World;
+        total_agents := @parameter0: int;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        temp$0 = 1;
+        this.<masSim.world.World: int ticks> = temp$0;
+        temp$1 = new java.util.ArrayList;
+        specialinvoke temp$1.<java.util.ArrayList: void <init>()>();
+        this.<masSim.world.World: java.util.List agents> = temp$1;
+        i = 0;
+
+     label0:
+        nop;
+        if i < total_agents goto label1;
+
+        goto label2;
+
+     label1:
+        nop;
+        temp$2 = new masSim.agent.Agent;
+        specialinvoke temp$2.<masSim.agent.Agent: void <init>(int)>(i);
+        agent = temp$2;
+        temp$3 = this.<masSim.world.World: java.util.List agents>;
+        temp$4 = interfaceinvoke temp$3.<java.util.List: boolean add(java.lang.Object)>(agent);
+        nop;
+        temp$5 = i;
+        temp$6 = temp$5 + 1;
+        i = temp$6;
+        goto label0;
+
+     label2:
+        nop;
+        return;
+    }
+
+    public void update(java.lang.String)
+    {
+        masSim.world.World this;
+        java.lang.String action;
+        java.util.List temp$0;
+        java.util.Iterator temp$1;
+        masSim.agent.IAgent agent;
+        boolean temp$2, temp$4;
+        java.lang.Object temp$3;
+        masSim.schedule.ScheduleElement goal, temp$5;
+
+        this := @this: masSim.world.World;
+        action := @parameter0: java.lang.String;
+        temp$0 = this.<masSim.world.World: java.util.List agents>;
+        temp$1 = interfaceinvoke temp$0.<java.lang.Iterable: java.util.Iterator iterator()>();
+
+     label0:
+        nop;
+        temp$2 = interfaceinvoke temp$1.<java.util.Iterator: boolean hasNext()>();
+        if temp$2 == 0 goto label4;
+
+        temp$3 = interfaceinvoke temp$1.<java.util.Iterator: java.lang.Object next()>();
+        agent = (masSim.agent.IAgent) temp$3;
+        temp$4 = virtualinvoke action.<java.lang.String: boolean equals(java.lang.Object)>("Q");
+        if temp$4 == 0 goto label2;
+
+        goto label1;
+
+     label1:
+        nop;
+        staticinvoke <masSim.main.MasSim: void setAlive(boolean)>(0);
+        goto label3;
+
+     label2:
+        nop;
+        temp$5 = new masSim.schedule.ScheduleElement;
+        specialinvoke temp$5.<masSim.schedule.ScheduleElement: void <init>(java.lang.String)>(action);
+        goal = temp$5;
+        interfaceinvoke agent.<masSim.agent.IAgent: void assignGoal(masSim.schedule.ScheduleElement)>(goal);
+
+     label3:
+        nop;
+        nop;
+        goto label0;
+
+     label4:
+        nop;
+        return;
+    }
+}

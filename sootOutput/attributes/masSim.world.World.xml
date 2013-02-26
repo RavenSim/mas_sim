@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="4" eline="4" spos="0" epos="0"/>
+<text info="ConstantValue: 10" aType="IntegerConstantValueTag"/>
+</attribute>
+<attribute>
+<srcPos sline="14" eline="14" spos="2" epos="39"/>
+<jmpPos sline="12" eline="12" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = 10" jmpLink="11" srcLink="11" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="16" eline="16" spos="0" epos="0"/>
+<text info="[]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="19" eline="19" spos="0" epos="0"/>
+<jmpPos sline="22" eline="22" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="21" srcLink="19" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="2" epos="23"/>
+<jmpPos sline="24" eline="24" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="21" srcLink="19" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="temp$0 has reaching def: temp$0 = 1" jmpLink="23" srcLink="19" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="28" eline="28" spos="0" epos="0"/>
+<text info="[total_agents]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="23" eline="23" spos="0" epos="0"/>
+<jmpPos sline="39" eline="39" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="37" srcLink="23" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="13" eline="13" spos="2" epos="23"/>
+<jmpPos sline="41" eline="41" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="37" srcLink="23" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="temp$0 has reaching def: temp$0 = 1" jmpLink="40" srcLink="23" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="24" eline="24" spos="12" epos="34"/>
+<jmpPos sline="43" eline="43" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = new java.util.ArrayList" jmpLink="42" srcLink="24" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="24" eline="24" spos="3" epos="8"/>
+<jmpPos sline="44" eline="44" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="37" srcLink="23" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="temp$1 has reaching def: temp$1 = new java.util.ArrayList" jmpLink="42" srcLink="24" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="26" eline="26" spos="19" epos="34"/>
+<jmpPos sline="49" eline="49" spos="0" epos="0"/>
+<link label="i has reaching def: i = temp$6" jmpLink="63" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="i has reaching def: i = 0" jmpLink="45" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="total_agents has reaching def: total_agents := @parameter0: int" jmpLink="38" srcLink="23" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="27" eline="27" spos="18" epos="29"/>
+<jmpPos sline="56" eline="56" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = new masSim.agent.Agent" jmpLink="55" srcLink="27" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="i has reaching def: i = temp$6" jmpLink="63" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="i has reaching def: i = 0" jmpLink="45" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="27" eline="27" spos="18" epos="29"/>
+<jmpPos sline="57" eline="57" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = new masSim.agent.Agent" jmpLink="55" srcLink="27" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="28" eline="28" spos="4" epos="9"/>
+<jmpPos sline="58" eline="58" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="37" srcLink="23" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="28" eline="28" spos="4" epos="9"/>
+<jmpPos sline="59" eline="59" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = this.&amp;lt;masSim.world.World: java.util.List agents&amp;gt;" jmpLink="58" srcLink="28" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="agent has reaching def: agent = temp$2" jmpLink="57" srcLink="27" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="26" eline="26" spos="37" epos="39"/>
+<jmpPos sline="61" eline="61" spos="0" epos="0"/>
+<link label="i has reaching def: i = temp$6" jmpLink="63" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="i has reaching def: i = 0" jmpLink="45" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="26" eline="26" spos="37" epos="37"/>
+<jmpPos sline="62" eline="62" spos="0" epos="0"/>
+<link label="temp$5 has reaching def: temp$5 = i" jmpLink="61" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="26" eline="26" spos="37" epos="37"/>
+<jmpPos sline="63" eline="63" spos="0" epos="0"/>
+<link label="temp$6 has reaching def: temp$6 = temp$5 + 1" jmpLink="62" srcLink="26" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="71" eline="71" spos="0" epos="0"/>
+<text info="[action]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="33" eline="33" spos="22" epos="27"/>
+<jmpPos sline="84" eline="84" spos="0" epos="0"/>
+<link label="this has reaching def: this := @this: masSim.world.World" jmpLink="82" srcLink="32" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="33" eline="33" spos="22" epos="27"/>
+<jmpPos sline="85" eline="85" spos="0" epos="0"/>
+<link label="temp$0 has reaching def: temp$0 = this.&amp;lt;masSim.world.World: java.util.List agents&amp;gt;" jmpLink="84" srcLink="33" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="33" eline="33" spos="22" epos="27"/>
+<jmpPos sline="89" eline="89" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = interfaceinvoke temp$0.&amp;lt;java.lang.Iterable: java.util.Iterator iterator()&amp;gt;()" jmpLink="85" srcLink="33" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="33" eline="33" spos="22" epos="27"/>
+<jmpPos sline="90" eline="90" spos="0" epos="0"/>
+<link label="temp$2 has reaching def: temp$2 = interfaceinvoke temp$1.&amp;lt;java.util.Iterator: boolean hasNext()&amp;gt;()" jmpLink="89" srcLink="33" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="33" eline="33" spos="22" epos="27"/>
+<jmpPos sline="92" eline="92" spos="0" epos="0"/>
+<link label="temp$1 has reaching def: temp$1 = interfaceinvoke temp$0.&amp;lt;java.lang.Iterable: java.util.Iterator iterator()&amp;gt;()" jmpLink="85" srcLink="33" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="33" eline="33" spos="22" epos="27"/>
+<jmpPos sline="93" eline="93" spos="0" epos="0"/>
+<link label="temp$3 has reaching def: temp$3 = interfaceinvoke temp$1.&amp;lt;java.util.Iterator: java.lang.Object next()&amp;gt;()" jmpLink="92" srcLink="33" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="34" eline="34" spos="15" epos="25"/>
+<jmpPos sline="94" eline="94" spos="0" epos="0"/>
+<link label="action has reaching def: action := @parameter0: java.lang.String" jmpLink="83" srcLink="32" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="34" eline="34" spos="15" epos="25"/>
+<jmpPos sline="95" eline="95" spos="0" epos="0"/>
+<link label="temp$4 has reaching def: temp$4 = virtualinvoke action.&amp;lt;java.lang.String: boolean equals(java.lang.Object)&amp;gt;(&quot;Q&quot;)" jmpLink="94" srcLink="34" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="38" eline="38" spos="28" epos="54"/>
+<jmpPos sline="107" eline="107" spos="0" epos="0"/>
+<link label="temp$5 has reaching def: temp$5 = new masSim.schedule.ScheduleElement" jmpLink="106" srcLink="38" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="action has reaching def: action := @parameter0: java.lang.String" jmpLink="83" srcLink="32" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="38" eline="38" spos="28" epos="54"/>
+<jmpPos sline="108" eline="108" spos="0" epos="0"/>
+<link label="temp$5 has reaching def: temp$5 = new masSim.schedule.ScheduleElement" jmpLink="106" srcLink="38" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+<attribute>
+<srcPos sline="39" eline="39" spos="5" epos="27"/>
+<jmpPos sline="109" eline="109" spos="0" epos="0"/>
+<link label="agent has reaching def: agent = (masSim.agent.IAgent) temp$3" jmpLink="93" srcLink="33" clssNm="masSim.world.World" aType="Reaching Defs"/>
+<link label="goal has reaching def: goal = temp$5" jmpLink="108" srcLink="38" clssNm="masSim.world.World" aType="Reaching Defs"/>
+</attribute>
+</attributes>
