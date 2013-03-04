@@ -19,6 +19,8 @@ public class World {
 	private IAgent ag1;
 	private IAgent ag2;
 	private ITask transTask;
+	private ITask cleanTask;
+	
 	//private List<ITask> tasks;
 	
 	// Blank constructor
@@ -28,7 +30,7 @@ public class World {
 	// Constructor
 	public World(int total_agents){
 		agents = new ArrayList<IAgent>();
-		int total_tasks = total_agents;
+		//int total_tasks = total_agents;
 		ag1 = new Agent(0, "Blackbird");
 		ag2 = new Agent(1, "Kiowa");
 		agents.add(ag1);
@@ -80,11 +82,43 @@ public class World {
 		transTask.addLeaf(tr5);
 		transTask.addLeaf(tr6);
 		
-		transSub1.addMethod(tr4);
-		transSub1.addMethod(tr5);
-		transSub1.addMethod(tr6);
+		transSub2.addMethod(tr4);
+		transSub2.addMethod(tr5);
+		transSub2.addMethod(tr6);
 		
 		ag1.addTaskAbility(transTask);
+		
+		// cleanup task creation
+		SeqSumQAF seqSum2 = new SeqSumQAF();
+		cleanTask = new Task("Clean LZ", seqSum2);
+		ITask cleanSub1 = new Task("CleanStart", seqSum2);
+		cleanTask.addTask(cleanSub1);
+		Method cl1 = new Method("Fly to clean up source", 7);
+		Method cl2 = new Method("Start search and destroy", 10);
+		
+		
+		cleanTask.addLeaf(cl1);
+		cleanTask.addLeaf(cl2);
+		
+		cleanSub1.addMethod(cl1);
+		cleanSub1.addMethod(cl2);
+		
+		ITask cleanSub2 = new Task("CLeanEnd", seqSum2);
+		cleanTask.addTask(cleanSub2);
+		Method cl3 = new Method("Fly to clean up dest", 15);
+		Method cl4 = new Method("Stop search and destroy", 2);
+		Method cl5 = new Method("Reschedule default activity", 2);
+		cleanSub1.addMethod(cl3);
+		
+		cleanTask.addLeaf(cl3);
+		cleanTask.addLeaf(cl4);
+		cleanTask.addLeaf(cl5);
+		
+		cleanSub2.addMethod(cl3);
+		cleanSub2.addMethod(cl4);
+		cleanSub2.addMethod(cl5);
+		
+		ag2.addTaskAbility(cleanTask);
 	}
 		
 	// To do...
@@ -97,6 +131,7 @@ public class World {
 				ag.update(1);
 			}
 			if(ticks == 11) ag1.assignTask(transTask);
+			if(ticks == 16) ag2.assignTask(cleanTask);
 			ticks++;
 			
 			System.out.println("Tick: " + ticks);	
