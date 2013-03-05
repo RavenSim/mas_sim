@@ -1,7 +1,0 @@
-public interface  masSim.agent.IAgent extends java.lang.Object
-{
-
-    public abstract int getCode();
-
-    public abstract void assignGoal(masSim.schedule.ScheduleElement);
-}
