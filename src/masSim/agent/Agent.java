@@ -1,11 +1,15 @@
 package masSim.agent;
 
-import masSim.world.*;
-import masSim.taems.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import java.util.*;
+import masSim.taems.ITask;
+import masSim.taems.Method;
+import masSim.taems.Schedule;
+import masSim.taems.ScheduleElement;
 
-public class Agent implements IAgent{
+public class Agent implements IAgent, Runnable{
 
 	private int code;
 	private String name;
@@ -87,5 +91,13 @@ public class Agent implements IAgent{
 		else {
 			System.out.println("Agent " + name + " idle");
 		}
+	}
+	
+	/**
+	 * Method required to implement `Runnable`
+	 */
+	
+	public void run() {
+		update(1);
 	}
 }

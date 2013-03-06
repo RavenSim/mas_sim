@@ -1,12 +1,13 @@
 package masSim.world;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
-import masSim.agent.IAgent;
-import masSim.main.*;
-import masSim.agent.*;
-import masSim.taems.*;
+import masSim.agent.Agent;
+import masSim.taems.ITask;
+import masSim.taems.Method;
+import masSim.taems.SeqSumQAF;
+import masSim.taems.Task;
 
 public class World {
 	
@@ -14,10 +15,10 @@ public class World {
 	public final static int maxTicks = 10000;
 	
 	/** Agents that inhabit the current world */
-	private List<IAgent> agents;
+	private List<Agent> agents;
 	
-	private IAgent ag1;
-	private IAgent ag2;
+	private Agent ag1;
+	private Agent ag2;
 	private ITask transTask;
 	private ITask cleanTask;
 	
@@ -29,10 +30,11 @@ public class World {
 	
 	// Constructor
 	public World(int total_agents){
-		agents = new ArrayList<IAgent>();
+		agents = new ArrayList<Agent>();
 		//int total_tasks = total_agents;
 		ag1 = new Agent(0, "Blackbird");
 		ag2 = new Agent(1, "Kiowa");
+		
 		agents.add(ag1);
 		agents.add(ag2);
 		// Create a fixed number of agents
@@ -56,6 +58,12 @@ public class World {
 			tasks.add(newTask);
 		}
 		*/
+		
+		// initialize execution threads
+		for(Agent a: agents) {
+			new Thread(a).start();
+		}
+		
 		// transport task creation
 		SeqSumQAF seqSum = new SeqSumQAF();
 		transTask = new Task("Transport", seqSum);
@@ -127,9 +135,9 @@ public class World {
 		//try {
 			
 			System.out.println("World updated with dt: " + dt );
-			for(IAgent ag : agents) {
-				ag.update(1);
-			}
+//			for(IAgent ag : agents) {
+//				ag.update(1);
+//			}
 			if(ticks == 11) ag1.assignTask(transTask);
 			if(ticks == 16) ag2.assignTask(cleanTask);
 			ticks++;
