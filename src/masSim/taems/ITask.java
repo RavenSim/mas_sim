@@ -1,6 +1,7 @@
-
 package masSim.taems;
+
 import java.util.Iterator;
+
 public interface ITask extends ITaskBase{
 
 	// Accessors

@@ -17,7 +17,6 @@ public class ScheduleElement {
 	  
 	  // Constructor
 	  public ScheduleElement(Method mt){
-		  
 		  if (mt == null){
 			  throw new NullMethod("ScheduleElement.Constructor: Null method passed");
 		  }
@@ -35,9 +34,9 @@ public class ScheduleElement {
 		  return name;
 	  }	  
 	  
-	  public Status update(int dt){
+	  public synchronized Status update(int dt) {
 		  int expectedTime = elapsedTime + dt;
-		  if ( expectedTime >= duration){
+		  if(expectedTime >= duration) {
 			  elapsedTime = duration;
 			  status = Status.COMPLETED;
 		  }
@@ -45,13 +44,15 @@ public class ScheduleElement {
 			  elapsedTime += dt;
 		  }
 		  try {
-			  Thread.sleep(sleepTime); 
+			  Thread.sleep(sleepTime);
 		  } catch (InterruptedException e) {
 			System.out.println("Thread sched el " + name + " interrupted");
 		  }
 		  return status;
 	  }
 	  
-	  public Status getStatus(){return status;}
+	  public Status getStatus(){
+		  return status;
+	  }
 	  
 }

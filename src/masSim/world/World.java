@@ -12,7 +12,7 @@ import masSim.taems.Task;
 public class World {
 	
 	private int ticks = 0;
-	public final static int maxTicks = 10000;
+	public final static int maxTicks = 1000;
 	
 	/** Agents that inhabit the current world */
 	private List<Agent> agents;
@@ -126,15 +126,15 @@ public class World {
 		cleanSub2.addMethod(cl4);
 		cleanSub2.addMethod(cl5);
 		
-		ag2.addTaskAbility(cleanTask);
+		ag2.assignTask(cleanTask);
 	}
 		
 	// To do...
 	// Class for non-local tasks
-	public void update(double dt){
+	public void update(double dt) {
 		//try {
 			
-			System.out.println("World updated with dt: " + dt );
+			//System.out.println("World updated with dt: " + dt );
 //			for(IAgent ag : agents) {
 //				ag.update(1);
 //			}
@@ -142,8 +142,8 @@ public class World {
 			if(ticks == 16) ag2.assignTask(cleanTask);
 			ticks++;
 			
-			System.out.println("Tick: " + ticks);	
-			if(ticks > 50) {
+			//System.out.println("Tick: " + ticks);	
+			if(ticks > maxTicks) {
 				System.out.println("Exiting masSim");
 				System.exit(0);
 			}

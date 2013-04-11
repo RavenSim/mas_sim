@@ -9,7 +9,7 @@ import masSim.taems.Method;
 import masSim.taems.Schedule;
 import masSim.taems.ScheduleElement;
 
-public class Agent implements IAgent, Runnable{
+public class Agent implements IAgent, Runnable {
 
 	private int code;
 	private String name;
@@ -30,7 +30,7 @@ public class Agent implements IAgent, Runnable{
 	
 	
 	// Constructor
-	public Agent(int newCode){
+	public Agent(int newCode) {
 		code = newCode;
 		sched = new Schedule();
 		curTasks = new ArrayList<ITask>();
@@ -39,23 +39,24 @@ public class Agent implements IAgent, Runnable{
 		status = Status.EMPTY;
 		name = "Agent" + newCode;
 		//agentWorld = new World();
-		System.out.println("Agent created with code" + code);
+		System.out.println("Agent created with code " + code);
 	}
 	
 	public Agent(int ID, String name){
 		this(ID);
 		this.name = name;
 	}
+	
 	// Returns identifying code, specific for this agent
-	public int getCode(){
+	public int getCode() {
 		return code;
-	}	
+	}
 
 	private void negotiate() {
 		// pretending to negotiate
-		
 	}
-	private void schedule(ITask task) {
+	
+	private synchronized void schedule(ITask task) {
 		// pretending to schedule
 		Iterator<Method> iterLeaves = task.getLeaves();
 		while(iterLeaves.hasNext()) {
@@ -65,20 +66,27 @@ public class Agent implements IAgent, Runnable{
 		}
 	}
 	
-	public void addTaskAbility(ITask task){
+	public void addTaskAbility(ITask task) {
 		taskAbilities.add(task);
 	}
 	
 	/**
 	 * this method handles the assignment goals
 	 */
-	public void assignTask(ITask task){
+	public void assignTask(ITask task) {
 		System.out.println("Agent: " + code + " - Task " + task.getName() + " Assigned");
 		curTasks.add(task);
 		schedule(task);
 		negotiate();
 	}
-	public void update(int tick) {
+	
+	/**
+	 * Update the schedule with a tick size
+	 * 
+	 * @param tick
+	 */
+	
+	public synchronized void update(int tick) {
 		
 		if(sched.hasNext(taskInd)) {
 			ScheduleElement el = sched.peek();
@@ -89,8 +97,16 @@ public class Agent implements IAgent, Runnable{
 			}
 		}
 		else {
-			System.out.println("Agent " + name + " idle");
+			//System.out.println("Agent " + name + " idle");
 		}
+	}
+	
+	/**
+	 * Getter for the bot status
+	 */
+	
+	public boolean idle() {
+		return status == Status.IDLE;
 	}
 	
 	/**
@@ -98,6 +114,8 @@ public class Agent implements IAgent, Runnable{
 	 */
 	
 	public void run() {
-		update(1);
+		while(true) {
+			update(1);
+		}
 	}
 }
