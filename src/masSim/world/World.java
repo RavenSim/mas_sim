@@ -124,12 +124,6 @@ public class World {
 	// To do...
 	// Class for non-local tasks
 	public void update(double dt) {
-		// try {
-
-		// Log.getLogger().info("World updated with dt: " + dt );
-		// for(IAgent ag : agents) {
-		// ag.update(1);
-		// }
 		if (ticks == 11)
 			ag1.assignTask(transTask);
 		if (ticks == 16)

@@ -1,6 +1,6 @@
 package masSim.taems;
 
-public class Method implements ITaskBase{
+public class Method implements ITaskBase {
 
 	private String name;
 	private int duration;
