@@ -5,7 +5,7 @@ public class Method implements ITaskBase{
 	private String name;
 	private int duration;
 	private int index;
-	
+
 	// Constructor
 	public Method(String nm, int dr){
 		name = nm;
@@ -15,7 +15,7 @@ public class Method implements ITaskBase{
 	public String getName(){return name;}
 //	public void SetDuration(int newDur){duration = newDur;}
 	public int getDuration(){return duration;}
-	
+
 	public String generateName(){
 		String resName = name + Integer.toString(index);
 		index++;

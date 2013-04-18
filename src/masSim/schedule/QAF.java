@@ -6,7 +6,7 @@ import java.io.*;
 import java.awt.*;
 
 public class QAF {
-	
+
 	  protected String label = "";
 
 	  /**

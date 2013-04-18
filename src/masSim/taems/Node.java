@@ -27,7 +27,7 @@ public class Node {
 	    label = l;
 	    agent = a;
 	  }
-	  
+
 	  /**
 	   * Default constructor
 	   * @param l The node's label
@@ -41,8 +41,8 @@ public class Node {
 	   */
 	  public Node() {
 	    this(null, null);
-	  }	
-	  
+	  }
+
 	  /**
 	   * Accessors
 	   */
@@ -52,7 +52,7 @@ public class Node {
 	  public void setAgent(Agent a) { agent = a; }
 	  public boolean isVirtual() { return false; }
 	  public int getStatus() { return status; }
-	  
+
 	  /**
 	   * Determines if an object matches this one.  The matching
 	   * details are as follows:
@@ -182,7 +182,7 @@ public class Node {
 	        }
 	        return true;
 	    }
-	    
+
 	    /**
 	     * Determines if the node has a particular attribute
 	     * @return True if the attribute is present
@@ -190,7 +190,7 @@ public class Node {
 	    public boolean hasAttribute(Object k) {
 	      return attributes.containsKey(k.toString());
 	    }
-	    
+
 	    /**
 	     * Note that this uses the toString() method for the key
 	     * to actually store the object.
@@ -200,6 +200,6 @@ public class Node {
 	    public Object getAttribute(Object k) {
 	      return attributes.get(k.toString());
 	    }
-	    
+
 }
 

@@ -46,7 +46,7 @@ public class World {
 		// Creation of sample tasks
 		/*
 		 * tasks = new ArrayList<ITask>();
-		 * 
+		 *
 		 * for (index = 0; index < total_tasks; index++){ SeqSumQAF seqSum = new
 		 * SeqSumQAF(); String taskName = "Cover_" + index; ITask newTask = new
 		 * Task(taskName, seqSum); tasks.add(newTask); }
@@ -143,7 +143,7 @@ public class World {
 		}
 		/*
 		 * if (tasks.isEmpty()){ MasSim.setAlive(false); }
-		 * 
+		 *
 		 * } catch (InterruptedException e) {
 		 * Log.getLogger().info("Thread interrupted"); }
 		 */

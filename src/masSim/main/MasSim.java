@@ -34,13 +34,13 @@ public class MasSim {
 
 		while (alive) {
 			long currentTime = System.nanoTime();
-			
+
 			world.update((currentTime - lastTime) * 1.0e-9);
 
 			long millisToNextUpdate = Math
 					.max(0, (1000 / 60)
 							- ((System.nanoTime() - currentTime) / 1000000));
-			
+
 			lastTime = currentTime;
 			try {
 				Thread.sleep(millisToNextUpdate);
