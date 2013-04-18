@@ -4,45 +4,39 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import masSim.util.Log;
 import masSim.taems.ITask;
 import masSim.taems.Method;
 import masSim.taems.Schedule;
 import masSim.taems.ScheduleElement;
 
 public class Agent implements IAgent, Runnable {
-
+	private enum Status {
+		IDLE, PROCESSNG, EMPTY
+	}
+	
 	private int code;
 	private String name;
 	private Schedule sched;
 	private List<ITask> taskAbilities;
 	private List<ITask> curTasks;
 	private int taskInd;
-	
-	private enum Status {
-		IDLE, PROCESSNG, EMPTY
-	}
-	
-	/** alive, dead or spawning? */
 	private Status status;
-
-	/** a pointer to the world data */
-	//private World agentWorld;
-	
 	
 	// Constructor
 	public Agent(int newCode) {
+		taskInd = 0;
 		code = newCode;
+		status = Status.EMPTY;
 		sched = new Schedule();
+		name = "Agent" + newCode;
 		curTasks = new ArrayList<ITask>();
 		taskAbilities = new ArrayList<ITask>();
-		taskInd = 0;
-		status = Status.EMPTY;
-		name = "Agent" + newCode;
-		//agentWorld = new World();
-		System.out.println("Agent created with code " + code);
+		
+		Log.getLogger().info("Agent created with code " + code);
 	}
 	
-	public Agent(int ID, String name){
+	public Agent(int ID, String name) {
 		this(ID);
 		this.name = name;
 	}
@@ -74,10 +68,11 @@ public class Agent implements IAgent, Runnable {
 	 * this method handles the assignment goals
 	 */
 	public void assignTask(ITask task) {
-		System.out.println("Agent: " + code + " - Task " + task.getName() + " Assigned");
 		curTasks.add(task);
 		schedule(task);
 		negotiate();
+		
+		Log.getLogger().info("Agent: " + code + " - Task " + task.getName() + " Assigned");
 	}
 	
 	/**
@@ -92,12 +87,12 @@ public class Agent implements IAgent, Runnable {
 			ScheduleElement el = sched.peek();
 			ScheduleElement.Status status = el.update(tick);
 			if(status == ScheduleElement.Status.COMPLETED) {
-				System.out.println("Agent " + name + " completed item " + el.getName());
 				sched.poll();
+				Log.getLogger().info("Agent " + name + " completed item " + el.getName());
 			}
 		}
 		else {
-			//System.out.println("Agent " + name + " idle");
+			Log.getLogger().warning("Agent " + name + " idle");
 		}
 	}
 	
