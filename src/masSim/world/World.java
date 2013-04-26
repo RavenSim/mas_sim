@@ -6,13 +6,14 @@ import java.util.List;
 import masSim.agent.Agent;
 import masSim.taems.ITask;
 import masSim.taems.Method;
+import masSim.taems.DelegateMethod;
 import masSim.taems.SeqSumQAF;
 import masSim.taems.Task;
 import masSim.util.Log;
 
 public class World {
 	private int ticks = 0;
-	public final static int maxTicks = 1000;
+	public final static int maxTicks = 4000;
 
 	/** Agents that inhabit the current world */
 	private List<Agent> agents;
@@ -117,6 +118,15 @@ public class World {
 		cleanSub2.addMethod(cl3);
 		cleanSub2.addMethod(cl4);
 		cleanSub2.addMethod(cl5);
+		
+		// Delegate the clean method to ag1
+		DelegateMethod dm1 = new DelegateMethod("Agent 2 pick up", 
+				4, ag1, cleanTask);
+		
+		//Schedule it in a new team task
+		ITask delegate = new Task("Team clean", seqSum2);
+		delegate.addLeaf(dm1);
+		ag1.assignTask(delegate);
 
 		ag2.assignTask(cleanTask);
 	}
@@ -130,8 +140,8 @@ public class World {
 			ag2.assignTask(cleanTask);
 		ticks++;
 
-		// Log.getLogger().info("Tick: " + ticks);
-		if (ticks > maxTicks) {
+		Log.getLogger().fine("Tick: " + ticks);
+		if(ticks > maxTicks) {
 			Log.getLogger().info("Exiting masSim");
 			System.exit(0);
 		}

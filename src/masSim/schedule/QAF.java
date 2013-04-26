@@ -1,10 +1,5 @@
 package masSim.schedule;
 
-/* Global Includes */
-import java.util.*;
-import java.io.*;
-import java.awt.*;
-
 public class QAF {
 
 	  protected String label = "";

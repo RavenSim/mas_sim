@@ -9,13 +9,13 @@ public class Task implements ITask {
 	private String name;
 	private QAF qaf;
 	private List<ITaskBase> children;
-	private List<Method> leaves;
+	private List<IMethod> leaves;
 
 	// Constructor
 	public Task(String name, QAF qaf) {
 		this.name = name;
 		children = new ArrayList<ITaskBase>();
-		leaves = new ArrayList<Method>();
+		leaves = new ArrayList<IMethod>();
 		this.qaf = qaf;
 	}
 
@@ -24,7 +24,7 @@ public class Task implements ITask {
 		return name;
 	}
 
-	public void addMethod(Method mt) {
+	public void addMethod(IMethod mt) {
 		children.add(mt);
 		Log.getLogger().info("Task: " + name + " - Children: " + mt.getName()
 				+ " added");
@@ -36,11 +36,11 @@ public class Task implements ITask {
 				+ " added");
 	}
 
-	public void addLeaf(Method m) {
+	public void addLeaf(IMethod m) {
 		leaves.add(m);
 	}
 
-	public Iterator<Method> getLeaves() {
+	public Iterator<IMethod> getLeaves() {
 		return leaves.iterator();
 	}
 

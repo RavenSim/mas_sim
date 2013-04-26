@@ -6,7 +6,7 @@ import java.util.List;
 
 import masSim.util.Log;
 import masSim.taems.ITask;
-import masSim.taems.Method;
+import masSim.taems.IMethod;
 import masSim.taems.Schedule;
 import masSim.taems.ScheduleElement;
 
@@ -45,16 +45,20 @@ public class Agent implements IAgent, Runnable {
 	public int getCode() {
 		return code;
 	}
+	
+	public String getName() {
+		return name;
+	}
 
 	private void negotiate() {
 		// pretending to negotiate
 	}
 
-	private synchronized void schedule(ITask task) {
+	private void schedule(ITask task) {
 		// pretending to schedule
-		Iterator<Method> iterLeaves = task.getLeaves();
+		Iterator<IMethod> iterLeaves = task.getLeaves();
 		while(iterLeaves.hasNext()) {
-			Method m = iterLeaves.next();
+			IMethod m = iterLeaves.next();
 			ScheduleElement el = new ScheduleElement(m);
 			sched.addItem(el);
 		}
@@ -81,7 +85,7 @@ public class Agent implements IAgent, Runnable {
 	 * @param tick
 	 */
 
-	public synchronized void update(int tick) {
+	public void update(int tick) {
 
 		if(sched.hasNext(taskInd)) {
 			ScheduleElement el = sched.peek();

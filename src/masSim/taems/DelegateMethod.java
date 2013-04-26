@@ -1,18 +1,23 @@
 package masSim.taems;
 
 import masSim.util.Log;
+import masSim.agent.Agent;
 
-public class Method implements IMethod {
+public class DelegateMethod implements IMethod {
 
 	private String name;
 	private int duration;
+	private Agent delegate;
+	private ITask task;
 	private int index;
 
 	// Constructor
-	public Method(String nm, int dr) {
+	public DelegateMethod(String nm, int dr, Agent a, ITask t) {
 		name = nm;
 		duration = dr;
 		index = 1;
+		delegate = a;
+		task = t;
 	}
 	
 	public String getName() {
@@ -30,6 +35,7 @@ public class Method implements IMethod {
 	}
 	
 	public void execute() {
-		Log.getLogger().info("Executing method " + name);
+		Log.getLogger().info("Delegating " + task.getName() + " to " + delegate.getName());
+		delegate.assignTask(task);
 	}
 }

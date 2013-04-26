@@ -4,7 +4,7 @@ import masSim.util.Log;
 
 public class ScheduleElement {
 	private String name;
-	private Method method;
+	private IMethod method;
 	private int duration;
 	private int elapsedTime;
 	private Status status;
@@ -15,7 +15,7 @@ public class ScheduleElement {
 	}
 
 	// Constructor
-	public ScheduleElement(Method mt) {
+	public ScheduleElement(IMethod mt) {
 		if (mt == null) {
 			throw new NullMethod(
 					"ScheduleElement.Constructor: Null method passed");
@@ -34,11 +34,13 @@ public class ScheduleElement {
 		return name;
 	}
 
-	public synchronized Status update(int dt) {
+	public Status update(int dt) {
 		int expectedTime = elapsedTime + dt;
 		if (expectedTime >= duration) {
 			elapsedTime = duration;
 			status = Status.COMPLETED;
+			// We could execute the method and sleep for method.getDuration()
+			method.execute();
 		} else {
 			elapsedTime += dt;
 		}
